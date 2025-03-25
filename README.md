@@ -41,3 +41,29 @@
 # Server actions for signIn& signOut
 
 > /app/actions/index.ts
+
+### Check Auth ServerComponent
+
+> /src/app/page.tsx -> session.user
+
+### Check Auth Client Component
+
+> import { SessionProvider } from "next-auth/react";
+
+> /src/components/profile.tsx -> session.data.user
+
+### Check Auth Server-Client
+
+# Server
+
+> /src/auth.ts -> Server export auth, signOut, signIn
+
+# Client
+
+> /src/app/providers.tsx & /src/components/profile.tsx
+
+> ![Auth Status](https://github.com/samedan/2504_NextJS_Grinder_03_Discuss/blob/main/_printscreens/02printscreen.jpg)
+
+### Path Helpers
+
+> /src/paths.ts
