@@ -71,3 +71,5 @@
 ### Header with Auth state
 
 > /src/components/header.tsx -> {session?.user}
+
+> ![AuthHeader](https://github.com/samedan/2504_NextJS_Grinder_03_Discuss/blob/main/_printscreens/03printscreen.jpg)
