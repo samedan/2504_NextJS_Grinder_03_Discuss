@@ -67,3 +67,7 @@
 ### Path Helpers
 
 > /src/paths.ts
+
+### Header with Auth state
+
+> /src/components/header.tsx -> {session?.user}
