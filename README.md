@@ -77,3 +77,15 @@
 ### Setting HomePage static
 
 > Header.tsx -> Header-auth.tsx -> useSession();
+
+### Form Create Topic
+
+> components/topics/topic-create-form.tsx
+
+# Action
+
+> /src/actions/create-topic.ts
+
+### Validation with ZOD
+
+> createTopicSchema = z.object(...)
