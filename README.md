@@ -89,3 +89,16 @@
 ### Validation with ZOD
 
 > createTopicSchema = z.object(...)
+
+### errors type Interface
+
+# create-topics.ts
+
+```
+interface CreateTopicFormState {
+  errors: {
+    name?: string[];
+    description?: string[];
+  };
+}
+```
