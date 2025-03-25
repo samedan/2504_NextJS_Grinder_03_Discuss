@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState, startTransition } from "react";
+
 import {
   Input,
   Button,
@@ -8,11 +9,13 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
+  Form,
 } from "@nextui-org/react";
 import * as actions from "@/actions";
+import FormButton from "@/components/common/form-button";
 
 export default function TopicCreateForm() {
-  const [formState, action] = useActionState(actions.createTopic, {
+  const [formState, action, isPending] = useActionState(actions.createTopic, {
     errors: {},
   });
 
@@ -30,8 +33,8 @@ export default function TopicCreateForm() {
         <Button color="primary">Create a Topic</Button>
       </PopoverTrigger>
       <PopoverContent>
-        <form onSubmit={handleSubmit} noValidate>
-          <div className="flex flex-col gap-5 p-4 w-80">
+        <Form onSubmit={handleSubmit}>
+          <div className="flex flex-col gap-4 p-4 w-80">
             <h3 className="text-lg">Create a Topic</h3>
             <Input
               name="name"
@@ -41,7 +44,6 @@ export default function TopicCreateForm() {
               isInvalid={!!formState.errors.name}
               errorMessage={formState.errors.name?.join(", ")}
             />
-
             <Textarea
               name="description"
               label="Description"
@@ -50,14 +52,16 @@ export default function TopicCreateForm() {
               isInvalid={!!formState.errors.description}
               errorMessage={formState.errors.description?.join(", ")}
             />
+
             {formState.errors._form ? (
-              <div className="p-2 bg-red-200 border border-red-400 rounded">
+              <div className="rounded p-2 bg-red-200 border border-red-400">
                 {formState.errors._form?.join(", ")}
               </div>
             ) : null}
-            <Button type="submit">Submit</Button>
+
+            <FormButton isLoading={isPending}>Save</FormButton>
           </div>
-        </form>
+        </Form>
       </PopoverContent>
     </Popover>
   );
