@@ -116,3 +116,20 @@ interface CreateTopicFormState {
 > create-post.ts -> const topic = await db.topic.findFirst({})
 
 > src/app/topics/[slug]/page.tsx -> pass topicId to PostCreateForm -> <PostCreateForm slug={slug} />
+
+### Model Queries Requests from DBB
+
+> /src/db/queries/posts.ts
+
+```
+export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
+  return db.post.findMany({
+    where: { topic: { slug: slug } },
+    include: {
+      topic: { select: { slug: true } },
+      user: { select: { name: true } },
+      _count: { select: { comments: true } },
+    },
+  });
+}
+```
