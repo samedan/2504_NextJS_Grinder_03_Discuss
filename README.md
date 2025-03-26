@@ -108,3 +108,11 @@ interface CreateTopicFormState {
 > /src/actions/create-topic.ts
 
 > ![Errors](https://github.com/samedan/2504_NextJS_Grinder_03_Discuss/blob/main/_printscreens/04printscreen.jpg)
+
+### Post Validation DBB
+
+# Check to see if Post has valid Topic (DBB)
+
+> create-post.ts -> const topic = await db.topic.findFirst({})
+
+> src/app/topics/[slug]/page.tsx -> pass topicId to PostCreateForm -> <PostCreateForm slug={slug} />
