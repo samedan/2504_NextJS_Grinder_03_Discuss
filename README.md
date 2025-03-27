@@ -133,3 +133,17 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
   });
 }
 ```
+
+### Individual Post
+
+# Query to get Post
+
+> src/db/queries/posts.ts
+
+# Show Post
+
+> /src/app/topics/[slug]/posts/[postId]/page.tsx
+
+# Post List
+
+> /src/app/topics/[slug]/page.tsx
