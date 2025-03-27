@@ -147,3 +147,13 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 # Post List
 
 > /src/app/topics/[slug]/page.tsx
+
+### COMMENTS
+
+> src/db/queries/comments.ts -> fetchCommentsByPostId()
+
+> src/componnets/comments/comment-list.tsx -> fetchData()
+
+> /src/components/comments/comment-show.tsx
+
+> /src/app/topics/[slug]/posts/[postId]/page.tsx
