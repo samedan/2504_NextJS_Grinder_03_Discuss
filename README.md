@@ -157,3 +157,7 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 > /src/components/comments/comment-show.tsx
 
 > /src/app/topics/[slug]/posts/[postId]/page.tsx
+
+### Pass Postid to all child pages
+
+>
