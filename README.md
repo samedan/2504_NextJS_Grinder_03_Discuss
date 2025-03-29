@@ -164,4 +164,6 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 
 ### Pass Postid to all child pages
 
->
+### Memoization
+
+> /src/db/queries/comments.ts -> cache()
