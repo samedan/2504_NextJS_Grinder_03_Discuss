@@ -167,3 +167,19 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 ### Memoization
 
 > /src/db/queries/comments.ts -> cache()
+
+### Suspence - streaming content
+
+# Pause
+
+> post-show.tsx -> await new Promise((resolve) => setTimeout(resolve, 2500));
+
+# Test Suspence
+
+> /src/app/topics/[slug]/posts/[postId]/page.tsx -> <Suspense fallback={<div>Loading...</div>}>
+
+### Suspence with Skeleton
+
+> post-show-loading.tsx -> <Skeleton />
+
+> ![Skeleton](https://github.com/samedan/2504_NextJS_Grinder_03_Discuss/blob/main/_printscreens/05printscreen.jpg)
