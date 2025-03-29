@@ -21,3 +21,28 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
     },
   });
 }
+
+export function fetchTopPosts(): Promise<PostWithData[]> {
+  const topPosts = db.post.findMany({
+    orderBy: [
+      {
+        comments: {
+          _count: "desc",
+        },
+      },
+    ],
+    include: {
+      topic: { select: { slug: true } },
+      user: { select: { name: true, image: true } },
+      _count: { select: { comments: true } },
+    },
+    take: 5,
+  });
+  const printAddress = async () => {
+    const a = await topPosts;
+    console.log(a);
+  };
+  // console.log(topPosts);
+  printAddress();
+  return topPosts;
+}

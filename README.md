@@ -183,3 +183,13 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 > post-show-loading.tsx -> <Skeleton />
 
 > ![Skeleton](https://github.com/samedan/2504_NextJS_Grinder_03_Discuss/blob/main/_printscreens/05printscreen.jpg)
+
+### TopPosts on Front Page
+
+# Database return with associated data
+
+> /src/db/queries/posts.ts -< fetchTopPosts()
+
+# display on front page
+
+> /src/app/page.tsx
