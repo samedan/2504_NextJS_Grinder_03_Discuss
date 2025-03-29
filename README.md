@@ -193,3 +193,9 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 # display on front page
 
 > /src/app/page.tsx
+
+### Search params
+
+# SearchInput (search-input.tsx)
+
+> <Input defaultValue={searchParams.get("term") || ""} />;
