@@ -199,3 +199,11 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 # SearchInput (search-input.tsx)
 
 > <Input defaultValue={searchParams.get("term") || ""} />;
+
+### Passing searchParams/query to SearchPage
+
+> /src/app/search/page.tsx
+
+# get seacrhQueries
+
+> /src/db/queries/posts.ts -> fetchPostsBysearchTerm()
