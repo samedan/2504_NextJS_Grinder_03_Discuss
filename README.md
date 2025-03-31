@@ -207,3 +207,7 @@ export function fetchPostByTopicSlug(slug: string): Promise<PostWithData[]> {
 # get seacrhQueries
 
 > /src/db/queries/posts.ts -> fetchPostsBysearchTerm()
+
+### Error on npm_run_build
+
+> header.tsx -> <Suspense><SearchInput /></Suspense>
