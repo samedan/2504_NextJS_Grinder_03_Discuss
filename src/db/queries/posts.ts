@@ -52,9 +52,9 @@ export function fetchTopPosts(): Promise<PostWithData[]> {
     },
     take: 5,
   });
-  // const printAddress = async () => {
-  //   const a = await topPosts;
-  // };
-  // printAddress();
+  const printAddress = async () => {
+    const a = await topPosts;
+  };
+  printAddress();
   return topPosts;
 }
