@@ -54,6 +54,7 @@ export function fetchTopPosts(): Promise<PostWithData[]> {
   });
   const printAddress = async () => {
     const a = await topPosts;
+    console.log(a);
   };
   printAddress();
   return topPosts;
